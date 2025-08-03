@@ -16,11 +16,6 @@ Route::get('/', fn() => view('welcome'))->name('welcome');
 Route::get('/dashboard', function () {
     $query = Product::query();
 
-    // Tambahkan fitur pencarian atau filter jika ada
-    if (request('search')) {
-        $query->where('name', 'like', '%' . request('search') . '%')
-              ->orWhere('category', 'like', '%' . request('search') . '%');
-    }
 
     if (request('category')) {
         $query->where('category', request('category'));

@@ -6,7 +6,7 @@
             </h2>
             <a href="{{ route('products.index') }}"
                 class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                Back to Products
+                Kembali
             </a>
         </div>
     </x-slot>

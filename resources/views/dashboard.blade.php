@@ -12,25 +12,7 @@
 
     <div class="py-0">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <!-- Search and Filter -->
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-6">
-                <div class="p-6">
-                    <form method="GET" action="{{ route('products.index') }}" class="flex flex-wrap gap-4">
-                   
-                        <select name="category" class="rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                            <option value="">All Categories</option>
-                            @foreach($categories as $category)
-                                <option value="{{ $category }}" {{ request('category') == $category ? 'selected' : '' }}>
-                                    {{ $category }}
-                                </option>
-                            @endforeach
-                        </select>
-                        
-                        
-                
-                    </form>
-                </div>
-            </div>
+           
 
             <!-- Success Message -->
             @if(session('success'))
